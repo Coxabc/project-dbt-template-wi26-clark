@@ -1,0 +1,2 @@
+select *
+from SNOWBEARAIR_DB.RAW.NEWS_COX_A

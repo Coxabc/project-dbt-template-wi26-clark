@@ -1,0 +1,2 @@
+select *
+from SNOWBEARAIR_DB.RAW.WEATHER_COX_A

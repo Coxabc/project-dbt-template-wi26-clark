@@ -1,0 +1,2 @@
+select *
+from SNOWBEARAIR_DB.RAW.STOCK_API_COX_A
