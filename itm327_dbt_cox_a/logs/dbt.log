@@ -1885,3 +1885,749 @@ JOIN SNOWBEARAIR_DB.RAW.WEATHER_COX_A lon
 [0m19:25:29.359977 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 18.211016, "process_in_blocks": "0", "process_kernel_time": 1.19, "process_mem_max_rss": "431888", "process_out_blocks": "0", "process_user_time": 5.53}
 [0m19:25:29.360699 [debug] [Dummy-1   ]: Command `cli run` succeeded at 19:25:29.360414 after 18.21 seconds
 [0m19:25:29.361268 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:01:33.112161 | 526871d0-43b4-43e2-8918-492af0afcfef ==============================
+[0m14:01:33.112161 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:01:33.113266 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m14:01:33.343553 [info ] [Dummy-1   ]: Warning: No packages were found in packages.yml
+[0m14:01:33.344615 [info ] [Dummy-1   ]: Warning: No packages were found in packages.yml
+[0m14:01:33.346460 [debug] [Dummy-1   ]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.33217812, "process_in_blocks": "0", "process_kernel_time": 0.59, "process_mem_max_rss": "395580", "process_out_blocks": "0", "process_user_time": 4.02}
+[0m14:01:33.347181 [debug] [Dummy-1   ]: Command `cli deps` succeeded at 14:01:33.346899 after 0.33 seconds
+[0m14:01:33.347716 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:01:50.813498 | 5366cfc5-208e-4659-9c60-6fb5201dba51 ==============================
+[0m14:01:50.813498 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:01:50.814586 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m14:01:51.172532 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:01:51.724005 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:01:51.969563 [debug] [Dummy-1   ]: Partial parsing enabled: 2 files deleted, 2 files added, 0 files changed.
+[0m14:01:51.970516 [debug] [Dummy-1   ]: Partial parsing: added file: itm327://models/marts/ml_mart.py
+[0m14:01:51.971252 [debug] [Dummy-1   ]: Partial parsing: added file: itm327://models/marts/Mart_stock_weather_daily.sql
+[0m14:01:51.971830 [debug] [Dummy-1   ]: Partial parsing: deleted file: itm327://models/marts/weather_market_conditions.sql
+[0m14:01:51.972341 [debug] [Dummy-1   ]: Partial parsing: deleted file: itm327://models/marts/stock_news_daily.sql
+[0m14:01:52.640801 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:01:52.643385 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:01:52.684394 [info ] [Dummy-1   ]: Found 9 models, 3 sources, 476 macros
+[0m14:01:52.687228 [info ] [Dummy-1   ]: 
+[0m14:01:52.687789 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m14:01:52.688240 [info ] [Dummy-1   ]: 
+[0m14:01:52.689061 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m14:01:52.696461 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m14:01:52.807766 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:01:52.808447 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m14:01:52.809149 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:01:53.517280 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.708 seconds
+[0m14:01:53.523143 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:01:53.523757 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m14:01:53.810947 [debug] [ThreadPool]: SQL status: SUCCESS 78 in 0.286 seconds
+[0m14:01:53.816521 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:01:53.817126 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m14:01:53.931559 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.114 seconds
+[0m14:01:53.964273 [debug] [Thread-2 (]: Began running node model.itm327.dim_dates_cox_a
+[0m14:01:53.965093 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_dates_cox_a)
+[0m14:01:53.965696 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_dates_cox_a
+[0m14:01:53.977659 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_dates_cox_a"
+[0m14:01:53.978651 [debug] [Thread-2 (]: Began executing node model.itm327.dim_dates_cox_a
+[0m14:01:53.979709 [debug] [Thread-2 (]: Finished running node model.itm327.dim_dates_cox_a
+[0m14:01:53.980423 [debug] [Thread-2 (]: Began running node model.itm327.raw_news
+[0m14:01:53.981475 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_dates_cox_a, now model.itm327.raw_news)
+[0m14:01:53.982083 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_news
+[0m14:01:53.989127 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_news"
+[0m14:01:53.989999 [debug] [Thread-2 (]: Began executing node model.itm327.raw_news
+[0m14:01:53.990985 [debug] [Thread-2 (]: Finished running node model.itm327.raw_news
+[0m14:01:53.991662 [debug] [Thread-2 (]: Began running node model.itm327.raw_stocks
+[0m14:01:53.992429 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_news, now model.itm327.raw_stocks)
+[0m14:01:53.993000 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_stocks
+[0m14:01:53.998798 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_stocks"
+[0m14:01:53.999630 [debug] [Thread-2 (]: Began executing node model.itm327.raw_stocks
+[0m14:01:54.000590 [debug] [Thread-2 (]: Finished running node model.itm327.raw_stocks
+[0m14:01:54.001261 [debug] [Thread-2 (]: Began running node model.itm327.raw_weather
+[0m14:01:54.002013 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_stocks, now model.itm327.raw_weather)
+[0m14:01:54.002556 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_weather
+[0m14:01:54.008120 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_weather"
+[0m14:01:54.008957 [debug] [Thread-2 (]: Began executing node model.itm327.raw_weather
+[0m14:01:54.009928 [debug] [Thread-2 (]: Finished running node model.itm327.raw_weather
+[0m14:01:54.010615 [debug] [Thread-2 (]: Began running node model.itm327.dim_news_cox_a
+[0m14:01:54.011363 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_weather, now model.itm327.dim_news_cox_a)
+[0m14:01:54.011934 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news_cox_a
+[0m14:01:54.018152 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news_cox_a"
+[0m14:01:54.019017 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news_cox_a
+[0m14:01:54.019981 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news_cox_a
+[0m14:01:54.020647 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks_cox_a
+[0m14:01:54.021396 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news_cox_a, now model.itm327.dim_stocks_cox_a)
+[0m14:01:54.021984 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks_cox_a
+[0m14:01:54.028191 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks_cox_a"
+[0m14:01:54.029022 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks_cox_a
+[0m14:01:54.029991 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks_cox_a
+[0m14:01:54.030668 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_cox_a
+[0m14:01:54.031708 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks_cox_a, now model.itm327.dim_weather_cox_a)
+[0m14:01:54.032312 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_cox_a
+[0m14:01:54.040911 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_cox_a"
+[0m14:01:54.041771 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_cox_a
+[0m14:01:54.042772 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_cox_a
+[0m14:01:54.043459 [debug] [Thread-2 (]: Began running node model.itm327.fact_news_daily_cox_a
+[0m14:01:54.044403 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_cox_a, now model.itm327.fact_news_daily_cox_a)
+[0m14:01:54.044969 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_news_daily_cox_a
+[0m14:01:54.051089 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_news_daily_cox_a"
+[0m14:01:54.051949 [debug] [Thread-2 (]: Began executing node model.itm327.fact_news_daily_cox_a
+[0m14:01:54.052921 [debug] [Thread-2 (]: Finished running node model.itm327.fact_news_daily_cox_a
+[0m14:01:54.053620 [debug] [Thread-2 (]: Began running node model.itm327.ml_analysis_fact_cox_a
+[0m14:01:54.054432 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_news_daily_cox_a, now model.itm327.ml_analysis_fact_cox_a)
+[0m14:01:54.055003 [debug] [Thread-2 (]: Began compiling node model.itm327.ml_analysis_fact_cox_a
+[0m14:01:54.063434 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.ml_analysis_fact_cox_a"
+[0m14:01:54.064390 [debug] [Thread-2 (]: Began executing node model.itm327.ml_analysis_fact_cox_a
+[0m14:01:54.065589 [debug] [Thread-2 (]: Finished running node model.itm327.ml_analysis_fact_cox_a
+[0m14:01:54.067743 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m14:01:54.068304 [debug] [Dummy-1   ]: Connection 'model.itm327.ml_analysis_fact_cox_a' was properly closed.
+[0m14:01:54.070548 [debug] [Dummy-1   ]: Command end result
+[0m14:01:54.103690 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:01:54.106118 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:01:54.115564 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m14:01:54.117597 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.4002657, "process_in_blocks": "0", "process_kernel_time": 0.95, "process_mem_max_rss": "480688", "process_out_blocks": "0", "process_user_time": 5.45}
+[0m14:01:54.118368 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 14:01:54.118067 after 3.40 seconds
+[0m14:01:54.118949 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:04:25.619961 | 9b451cc1-1f8d-4dcd-b5ab-3f42d1481b5a ==============================
+[0m14:04:25.619961 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:04:25.621061 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m14:04:25.995327 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:04:26.570707 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:04:26.822473 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:04:26.823175 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:04:27.110938 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:04:27.113791 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:04:27.156933 [info ] [Dummy-1   ]: Found 9 models, 3 sources, 476 macros
+[0m14:04:27.160026 [info ] [Dummy-1   ]: 
+[0m14:04:27.160649 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m14:04:27.161126 [info ] [Dummy-1   ]: 
+[0m14:04:27.161993 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m14:04:27.169876 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m14:04:27.286594 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:04:27.287276 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m14:04:27.287784 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:35.885439 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 8.597 seconds
+[0m14:04:35.891445 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:04:35.892071 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m14:04:36.121028 [debug] [ThreadPool]: SQL status: SUCCESS 78 in 0.228 seconds
+[0m14:04:36.127534 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:04:36.128157 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m14:04:36.229570 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.101 seconds
+[0m14:04:36.263964 [debug] [Thread-2 (]: Began running node model.itm327.dim_dates_cox_a
+[0m14:04:36.264811 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_dates_cox_a)
+[0m14:04:36.265418 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_dates_cox_a
+[0m14:04:36.277742 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_dates_cox_a"
+[0m14:04:36.278796 [debug] [Thread-2 (]: Began executing node model.itm327.dim_dates_cox_a
+[0m14:04:36.279858 [debug] [Thread-2 (]: Finished running node model.itm327.dim_dates_cox_a
+[0m14:04:36.280558 [debug] [Thread-2 (]: Began running node model.itm327.raw_news
+[0m14:04:36.281629 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_dates_cox_a, now model.itm327.raw_news)
+[0m14:04:36.282235 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_news
+[0m14:04:36.287981 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_news"
+[0m14:04:36.288885 [debug] [Thread-2 (]: Began executing node model.itm327.raw_news
+[0m14:04:36.289894 [debug] [Thread-2 (]: Finished running node model.itm327.raw_news
+[0m14:04:36.290598 [debug] [Thread-2 (]: Began running node model.itm327.raw_stocks
+[0m14:04:36.291373 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_news, now model.itm327.raw_stocks)
+[0m14:04:36.291918 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_stocks
+[0m14:04:36.297642 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_stocks"
+[0m14:04:36.298568 [debug] [Thread-2 (]: Began executing node model.itm327.raw_stocks
+[0m14:04:36.299565 [debug] [Thread-2 (]: Finished running node model.itm327.raw_stocks
+[0m14:04:36.300257 [debug] [Thread-2 (]: Began running node model.itm327.raw_weather
+[0m14:04:36.301022 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_stocks, now model.itm327.raw_weather)
+[0m14:04:36.301571 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_weather
+[0m14:04:36.307339 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_weather"
+[0m14:04:36.308134 [debug] [Thread-2 (]: Began executing node model.itm327.raw_weather
+[0m14:04:36.309200 [debug] [Thread-2 (]: Finished running node model.itm327.raw_weather
+[0m14:04:36.309930 [debug] [Thread-2 (]: Began running node model.itm327.dim_news_cox_a
+[0m14:04:36.310694 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_weather, now model.itm327.dim_news_cox_a)
+[0m14:04:36.311241 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news_cox_a
+[0m14:04:36.320041 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news_cox_a"
+[0m14:04:36.320891 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news_cox_a
+[0m14:04:36.321882 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news_cox_a
+[0m14:04:36.322586 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks_cox_a
+[0m14:04:36.323366 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news_cox_a, now model.itm327.dim_stocks_cox_a)
+[0m14:04:36.323922 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks_cox_a
+[0m14:04:36.330464 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks_cox_a"
+[0m14:04:36.331288 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks_cox_a
+[0m14:04:36.332272 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks_cox_a
+[0m14:04:36.332952 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_cox_a
+[0m14:04:36.333918 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks_cox_a, now model.itm327.dim_weather_cox_a)
+[0m14:04:36.334497 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_cox_a
+[0m14:04:36.341052 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_cox_a"
+[0m14:04:36.341929 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_cox_a
+[0m14:04:36.342906 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_cox_a
+[0m14:04:36.343600 [debug] [Thread-2 (]: Began running node model.itm327.fact_news_daily_cox_a
+[0m14:04:36.344690 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_cox_a, now model.itm327.fact_news_daily_cox_a)
+[0m14:04:36.345316 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_news_daily_cox_a
+[0m14:04:36.351746 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_news_daily_cox_a"
+[0m14:04:36.352610 [debug] [Thread-2 (]: Began executing node model.itm327.fact_news_daily_cox_a
+[0m14:04:36.353618 [debug] [Thread-2 (]: Finished running node model.itm327.fact_news_daily_cox_a
+[0m14:04:36.354344 [debug] [Thread-2 (]: Began running node model.itm327.ml_analysis_fact_cox_a
+[0m14:04:36.355089 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_news_daily_cox_a, now model.itm327.ml_analysis_fact_cox_a)
+[0m14:04:36.355645 [debug] [Thread-2 (]: Began compiling node model.itm327.ml_analysis_fact_cox_a
+[0m14:04:36.364233 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.ml_analysis_fact_cox_a"
+[0m14:04:36.365109 [debug] [Thread-2 (]: Began executing node model.itm327.ml_analysis_fact_cox_a
+[0m14:04:36.366109 [debug] [Thread-2 (]: Finished running node model.itm327.ml_analysis_fact_cox_a
+[0m14:04:36.368403 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m14:04:36.368990 [debug] [Dummy-1   ]: Connection 'model.itm327.ml_analysis_fact_cox_a' was properly closed.
+[0m14:04:36.371240 [debug] [Dummy-1   ]: Command end result
+[0m14:04:36.405987 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:04:36.408611 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:04:36.418415 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m14:04:36.420364 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 10.901013, "process_in_blocks": "0", "process_kernel_time": 1.01, "process_mem_max_rss": "430888", "process_out_blocks": "0", "process_user_time": 5.2}
+[0m14:04:36.421074 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 14:04:36.420795 after 10.90 seconds
+[0m14:04:36.421645 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:05:28.854792 | 7efb65c6-21aa-4950-bf2d-b01af2d8bdcb ==============================
+[0m14:05:28.854792 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:05:28.855891 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m14:05:29.093785 [info ] [Dummy-1   ]: Warning: No packages were found in packages.yml
+[0m14:05:29.094868 [info ] [Dummy-1   ]: Warning: No packages were found in packages.yml
+[0m14:05:29.096712 [debug] [Dummy-1   ]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.34237453, "process_in_blocks": "0", "process_kernel_time": 0.6, "process_mem_max_rss": "389268", "process_out_blocks": "0", "process_user_time": 4.01}
+[0m14:05:29.097442 [debug] [Dummy-1   ]: Command `cli deps` succeeded at 14:05:29.097152 after 0.34 seconds
+[0m14:05:29.098025 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:05:50.352690 | 2a99eda5-67a0-4950-bf15-672d18a305a4 ==============================
+[0m14:05:50.352690 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:05:50.353813 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m14:05:50.717057 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:05:51.287410 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:05:51.446895 [info ] [Dummy-1   ]: Unable to do partial parsing because a project config has changed
+[0m14:05:53.047696 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error
+  Model 'model.itm327.Mart_stock_weather_daily' (models/marts/Mart_stock_weather_daily.sql) depends on a node named 'ml_analysis_fact_table_cox_a' which was not found
+[0m14:05:53.049798 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 2.7952473, "process_in_blocks": "0", "process_kernel_time": 0.94, "process_mem_max_rss": "463748", "process_out_blocks": "0", "process_user_time": 5.97}
+[0m14:05:53.050552 [debug] [Dummy-1   ]: Command `cli compile` failed at 14:05:53.050263 after 2.80 seconds
+[0m14:05:53.051179 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:06:55.143893 | 1ac048b3-cdb2-4905-a9ca-0d52c0a56a81 ==============================
+[0m14:06:55.143893 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:06:55.144969 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m14:06:55.505847 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:06:56.064987 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:06:56.221508 [info ] [Dummy-1   ]: Unable to do partial parsing because a project config has changed
+[0m14:06:57.813833 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error
+  Model 'model.itm327.ml_mart' (models/marts/ml_mart.py) depends on a node named 'mart_stock_weather_daily_cox_a' which was not found
+[0m14:06:57.815842 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 2.769908, "process_in_blocks": "0", "process_kernel_time": 0.96, "process_mem_max_rss": "460724", "process_out_blocks": "0", "process_user_time": 5.65}
+[0m14:06:57.816577 [debug] [Dummy-1   ]: Command `cli compile` failed at 14:06:57.816288 after 2.77 seconds
+[0m14:06:57.817217 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:08:17.859476 | b545c114-d008-473a-a4e5-7c2f43002011 ==============================
+[0m14:08:17.859476 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:08:17.860601 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'introspect': 'True', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m14:08:18.230967 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:08:18.797701 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:08:18.957629 [info ] [Dummy-1   ]: Unable to do partial parsing because a project config has changed
+[0m14:08:20.572575 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error
+  Model 'model.itm327.ml_mart' (models/marts/ml_mart.py) depends on a node named 'Mart_stock_weather_daily_cox_a' which was not found
+[0m14:08:20.574626 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 2.813351, "process_in_blocks": "0", "process_kernel_time": 1.06, "process_mem_max_rss": "460084", "process_out_blocks": "0", "process_user_time": 5.93}
+[0m14:08:20.575364 [debug] [Dummy-1   ]: Command `cli compile` failed at 14:08:20.575074 after 2.81 seconds
+[0m14:08:20.575992 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:08:52.238473 | 02def4b7-7909-4578-aba8-88d918276f8f ==============================
+[0m14:08:52.238473 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:08:52.239623 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m14:08:52.613906 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:08:53.176310 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:08:53.337644 [info ] [Dummy-1   ]: Unable to do partial parsing because a project config has changed
+[0m14:08:55.202406 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:08:55.205119 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:08:55.247314 [info ] [Dummy-1   ]: Found 11 models, 3 sources, 476 macros
+[0m14:08:55.250612 [info ] [Dummy-1   ]: 
+[0m14:08:55.251247 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m14:08:55.251727 [info ] [Dummy-1   ]: 
+[0m14:08:55.252548 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m14:08:55.260643 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m14:08:55.372044 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:08:55.372722 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m14:08:55.373237 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:08:56.717843 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.344 seconds
+[0m14:08:56.723817 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:08:56.724471 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m14:08:56.911899 [debug] [ThreadPool]: SQL status: SUCCESS 78 in 0.187 seconds
+[0m14:08:56.917356 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:08:56.918011 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m14:08:57.009442 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.091 seconds
+[0m14:08:57.042976 [debug] [Thread-2 (]: Began running node model.itm327.dim_dates_cox_a
+[0m14:08:57.044273 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_dates_cox_a)
+[0m14:08:57.044949 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_dates_cox_a
+[0m14:08:57.056637 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_dates_cox_a"
+[0m14:08:57.057598 [debug] [Thread-2 (]: Began executing node model.itm327.dim_dates_cox_a
+[0m14:08:57.058804 [debug] [Thread-2 (]: Finished running node model.itm327.dim_dates_cox_a
+[0m14:08:57.059555 [debug] [Thread-2 (]: Began running node model.itm327.raw_news
+[0m14:08:57.060693 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_dates_cox_a, now model.itm327.raw_news)
+[0m14:08:57.061284 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_news
+[0m14:08:57.067051 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_news"
+[0m14:08:57.067919 [debug] [Thread-2 (]: Began executing node model.itm327.raw_news
+[0m14:08:57.069033 [debug] [Thread-2 (]: Finished running node model.itm327.raw_news
+[0m14:08:57.069778 [debug] [Thread-2 (]: Began running node model.itm327.raw_stocks
+[0m14:08:57.070565 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_news, now model.itm327.raw_stocks)
+[0m14:08:57.073024 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_stocks
+[0m14:08:57.078746 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_stocks"
+[0m14:08:57.079623 [debug] [Thread-2 (]: Began executing node model.itm327.raw_stocks
+[0m14:08:57.080630 [debug] [Thread-2 (]: Finished running node model.itm327.raw_stocks
+[0m14:08:57.081312 [debug] [Thread-2 (]: Began running node model.itm327.raw_weather
+[0m14:08:57.082090 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_stocks, now model.itm327.raw_weather)
+[0m14:08:57.082644 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_weather
+[0m14:08:57.088198 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_weather"
+[0m14:08:57.089197 [debug] [Thread-2 (]: Began executing node model.itm327.raw_weather
+[0m14:08:57.090282 [debug] [Thread-2 (]: Finished running node model.itm327.raw_weather
+[0m14:08:57.090985 [debug] [Thread-2 (]: Began running node model.itm327.dim_news_cox_a
+[0m14:08:57.091753 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_weather, now model.itm327.dim_news_cox_a)
+[0m14:08:57.092299 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news_cox_a
+[0m14:08:57.098943 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news_cox_a"
+[0m14:08:57.099860 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news_cox_a
+[0m14:08:57.101104 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news_cox_a
+[0m14:08:57.101826 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks_cox_a
+[0m14:08:57.102632 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news_cox_a, now model.itm327.dim_stocks_cox_a)
+[0m14:08:57.103198 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks_cox_a
+[0m14:08:57.109546 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks_cox_a"
+[0m14:08:57.110432 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks_cox_a
+[0m14:08:57.111452 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks_cox_a
+[0m14:08:57.112143 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_cox_a
+[0m14:08:57.113237 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks_cox_a, now model.itm327.dim_weather_cox_a)
+[0m14:08:57.113897 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_cox_a
+[0m14:08:57.120417 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_cox_a"
+[0m14:08:57.121281 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_cox_a
+[0m14:08:57.122313 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_cox_a
+[0m14:08:57.123024 [debug] [Thread-2 (]: Began running node model.itm327.fact_news_daily_cox_a
+[0m14:08:57.124053 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_cox_a, now model.itm327.fact_news_daily_cox_a)
+[0m14:08:57.124669 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_news_daily_cox_a
+[0m14:08:57.277522 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_news_daily_cox_a"
+[0m14:08:57.278658 [debug] [Thread-2 (]: Began executing node model.itm327.fact_news_daily_cox_a
+[0m14:08:57.279773 [debug] [Thread-2 (]: Finished running node model.itm327.fact_news_daily_cox_a
+[0m14:08:57.280525 [debug] [Thread-2 (]: Began running node model.itm327.ml_analysis_fact_cox_a
+[0m14:08:57.281347 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_news_daily_cox_a, now model.itm327.ml_analysis_fact_cox_a)
+[0m14:08:57.281954 [debug] [Thread-2 (]: Began compiling node model.itm327.ml_analysis_fact_cox_a
+[0m14:08:57.290212 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.ml_analysis_fact_cox_a"
+[0m14:08:57.291123 [debug] [Thread-2 (]: Began executing node model.itm327.ml_analysis_fact_cox_a
+[0m14:08:57.292147 [debug] [Thread-2 (]: Finished running node model.itm327.ml_analysis_fact_cox_a
+[0m14:08:57.293370 [debug] [Thread-2 (]: Began running node model.itm327.Mart_stock_weather_daily
+[0m14:08:57.294317 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.ml_analysis_fact_cox_a, now model.itm327.Mart_stock_weather_daily)
+[0m14:08:57.294896 [debug] [Thread-2 (]: Began compiling node model.itm327.Mart_stock_weather_daily
+[0m14:08:57.303344 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.Mart_stock_weather_daily"
+[0m14:08:57.304283 [debug] [Thread-2 (]: Began executing node model.itm327.Mart_stock_weather_daily
+[0m14:08:57.305274 [debug] [Thread-2 (]: Finished running node model.itm327.Mart_stock_weather_daily
+[0m14:08:57.306464 [debug] [Thread-2 (]: Began running node model.itm327.ml_mart
+[0m14:08:57.307348 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.Mart_stock_weather_daily, now model.itm327.ml_mart)
+[0m14:08:57.307915 [debug] [Thread-2 (]: Began compiling node model.itm327.ml_mart
+[0m14:08:57.342008 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.ml_mart"
+[0m14:08:57.342902 [debug] [Thread-2 (]: Began executing node model.itm327.ml_mart
+[0m14:08:57.343916 [debug] [Thread-2 (]: Finished running node model.itm327.ml_mart
+[0m14:08:57.346074 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m14:08:57.346633 [debug] [Dummy-1   ]: Connection 'model.itm327.ml_mart' was properly closed.
+[0m14:08:57.349248 [debug] [Dummy-1   ]: Command end result
+[0m14:08:57.383988 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:08:57.386813 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:08:57.396541 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m14:08:57.398608 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 5.259734, "process_in_blocks": "0", "process_kernel_time": 1.11, "process_mem_max_rss": "485160", "process_out_blocks": "0", "process_user_time": 6.76}
+[0m14:08:57.399402 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 14:08:57.399107 after 5.26 seconds
+[0m14:08:57.399962 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:12:10.930678 | fc827c0c-816a-4c7f-aa8a-7d388a3d8662 ==============================
+[0m14:12:10.930678 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:12:10.931812 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m14:12:11.298786 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:12:11.856834 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:12:12.107276 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:12:12.108569 [debug] [Dummy-1   ]: Partial parsing: updated file: itm327://models/marts/Mart_stock_weather_daily.sql
+[0m14:12:12.779968 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:12:12.782707 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:12:12.827496 [info ] [Dummy-1   ]: Found 11 models, 3 sources, 476 macros
+[0m14:12:12.830824 [info ] [Dummy-1   ]: 
+[0m14:12:12.831471 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m14:12:12.831949 [info ] [Dummy-1   ]: 
+[0m14:12:12.832782 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m14:12:12.840957 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m14:12:12.953022 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:12:12.953708 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m14:12:12.954226 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:12:13.565753 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.611 seconds
+[0m14:12:13.571964 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:12:13.572644 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m14:12:14.211551 [debug] [ThreadPool]: SQL status: SUCCESS 78 in 0.638 seconds
+[0m14:12:14.217405 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:12:14.218160 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m14:12:14.310905 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.092 seconds
+[0m14:12:14.344625 [debug] [Thread-2 (]: Began running node model.itm327.dim_dates_cox_a
+[0m14:12:14.345498 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_dates_cox_a)
+[0m14:12:14.346150 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_dates_cox_a
+[0m14:12:14.358397 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_dates_cox_a"
+[0m14:12:14.359384 [debug] [Thread-2 (]: Began executing node model.itm327.dim_dates_cox_a
+[0m14:12:14.360469 [debug] [Thread-2 (]: Finished running node model.itm327.dim_dates_cox_a
+[0m14:12:14.361220 [debug] [Thread-2 (]: Began running node model.itm327.raw_news
+[0m14:12:14.362351 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_dates_cox_a, now model.itm327.raw_news)
+[0m14:12:14.362933 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_news
+[0m14:12:14.368859 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_news"
+[0m14:12:14.369785 [debug] [Thread-2 (]: Began executing node model.itm327.raw_news
+[0m14:12:14.370829 [debug] [Thread-2 (]: Finished running node model.itm327.raw_news
+[0m14:12:14.371548 [debug] [Thread-2 (]: Began running node model.itm327.raw_stocks
+[0m14:12:14.372327 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_news, now model.itm327.raw_stocks)
+[0m14:12:14.372994 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_stocks
+[0m14:12:14.380907 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_stocks"
+[0m14:12:14.381820 [debug] [Thread-2 (]: Began executing node model.itm327.raw_stocks
+[0m14:12:14.382843 [debug] [Thread-2 (]: Finished running node model.itm327.raw_stocks
+[0m14:12:14.383561 [debug] [Thread-2 (]: Began running node model.itm327.raw_weather
+[0m14:12:14.384370 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_stocks, now model.itm327.raw_weather)
+[0m14:12:14.384956 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_weather
+[0m14:12:14.391173 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_weather"
+[0m14:12:14.392108 [debug] [Thread-2 (]: Began executing node model.itm327.raw_weather
+[0m14:12:14.393157 [debug] [Thread-2 (]: Finished running node model.itm327.raw_weather
+[0m14:12:14.393899 [debug] [Thread-2 (]: Began running node model.itm327.dim_news_cox_a
+[0m14:12:14.394731 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_weather, now model.itm327.dim_news_cox_a)
+[0m14:12:14.395302 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news_cox_a
+[0m14:12:14.401903 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news_cox_a"
+[0m14:12:14.402794 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news_cox_a
+[0m14:12:14.403821 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news_cox_a
+[0m14:12:14.404521 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks_cox_a
+[0m14:12:14.405373 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news_cox_a, now model.itm327.dim_stocks_cox_a)
+[0m14:12:14.405939 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks_cox_a
+[0m14:12:14.412641 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks_cox_a"
+[0m14:12:14.413570 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks_cox_a
+[0m14:12:14.414583 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks_cox_a
+[0m14:12:14.415280 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_cox_a
+[0m14:12:14.416491 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks_cox_a, now model.itm327.dim_weather_cox_a)
+[0m14:12:14.417139 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_cox_a
+[0m14:12:14.423844 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_cox_a"
+[0m14:12:14.424912 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_cox_a
+[0m14:12:14.425979 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_cox_a
+[0m14:12:14.426718 [debug] [Thread-2 (]: Began running node model.itm327.fact_news_daily_cox_a
+[0m14:12:14.427729 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_cox_a, now model.itm327.fact_news_daily_cox_a)
+[0m14:12:14.428449 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_news_daily_cox_a
+[0m14:12:14.437200 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_news_daily_cox_a"
+[0m14:12:14.438216 [debug] [Thread-2 (]: Began executing node model.itm327.fact_news_daily_cox_a
+[0m14:12:14.439314 [debug] [Thread-2 (]: Finished running node model.itm327.fact_news_daily_cox_a
+[0m14:12:14.440026 [debug] [Thread-2 (]: Began running node model.itm327.ml_analysis_fact_cox_a
+[0m14:12:14.440840 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_news_daily_cox_a, now model.itm327.ml_analysis_fact_cox_a)
+[0m14:12:14.441424 [debug] [Thread-2 (]: Began compiling node model.itm327.ml_analysis_fact_cox_a
+[0m14:12:14.449824 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.ml_analysis_fact_cox_a"
+[0m14:12:14.450723 [debug] [Thread-2 (]: Began executing node model.itm327.ml_analysis_fact_cox_a
+[0m14:12:14.451725 [debug] [Thread-2 (]: Finished running node model.itm327.ml_analysis_fact_cox_a
+[0m14:12:14.452982 [debug] [Thread-2 (]: Began running node model.itm327.Mart_stock_weather_daily
+[0m14:12:14.454306 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.ml_analysis_fact_cox_a, now model.itm327.Mart_stock_weather_daily)
+[0m14:12:14.454885 [debug] [Thread-2 (]: Began compiling node model.itm327.Mart_stock_weather_daily
+[0m14:12:14.463388 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.Mart_stock_weather_daily"
+[0m14:12:14.464312 [debug] [Thread-2 (]: Began executing node model.itm327.Mart_stock_weather_daily
+[0m14:12:14.465328 [debug] [Thread-2 (]: Finished running node model.itm327.Mart_stock_weather_daily
+[0m14:12:14.466554 [debug] [Thread-2 (]: Began running node model.itm327.ml_mart
+[0m14:12:14.467501 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.Mart_stock_weather_daily, now model.itm327.ml_mart)
+[0m14:12:14.468211 [debug] [Thread-2 (]: Began compiling node model.itm327.ml_mart
+[0m14:12:14.502464 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.ml_mart"
+[0m14:12:14.503418 [debug] [Thread-2 (]: Began executing node model.itm327.ml_mart
+[0m14:12:14.504431 [debug] [Thread-2 (]: Finished running node model.itm327.ml_mart
+[0m14:12:14.506577 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m14:12:14.507228 [debug] [Dummy-1   ]: Connection 'model.itm327.ml_mart' was properly closed.
+[0m14:12:14.509930 [debug] [Dummy-1   ]: Command end result
+[0m14:12:14.545555 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:12:14.548226 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:12:14.558451 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m14:12:14.560589 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.7289898, "process_in_blocks": "0", "process_kernel_time": 1.02, "process_mem_max_rss": "483096", "process_out_blocks": "0", "process_user_time": 5.67}
+[0m14:12:14.561399 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 14:12:14.561097 after 3.73 seconds
+[0m14:12:14.561992 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:17:21.813654 | b32ece9e-3907-49c9-aba3-378bef763095 ==============================
+[0m14:17:21.813654 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:17:21.814734 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m14:17:22.175231 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:17:22.736347 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:17:22.979234 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:17:22.979884 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:17:23.236005 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:17:23.238696 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:17:23.279373 [info ] [Dummy-1   ]: Found 11 models, 3 sources, 476 macros
+[0m14:17:23.282293 [info ] [Dummy-1   ]: 
+[0m14:17:23.282869 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m14:17:23.283330 [info ] [Dummy-1   ]: 
+[0m14:17:23.284144 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m14:17:23.291726 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m14:17:23.402441 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:17:23.403068 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m14:17:23.403577 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:17:24.326268 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.922 seconds
+[0m14:17:24.331988 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:17:24.332596 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m14:17:24.538163 [debug] [ThreadPool]: SQL status: SUCCESS 78 in 0.205 seconds
+[0m14:17:24.544478 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:17:24.545089 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m14:17:24.673735 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.128 seconds
+[0m14:17:24.706483 [debug] [Thread-2 (]: Began running node model.itm327.dim_dates_cox_a
+[0m14:17:24.707285 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_dates_cox_a)
+[0m14:17:24.707863 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_dates_cox_a
+[0m14:17:24.719538 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_dates_cox_a"
+[0m14:17:24.720447 [debug] [Thread-2 (]: Began executing node model.itm327.dim_dates_cox_a
+[0m14:17:24.721460 [debug] [Thread-2 (]: Finished running node model.itm327.dim_dates_cox_a
+[0m14:17:24.722145 [debug] [Thread-2 (]: Began running node model.itm327.raw_news
+[0m14:17:24.723152 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_dates_cox_a, now model.itm327.raw_news)
+[0m14:17:24.723723 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_news
+[0m14:17:24.729085 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_news"
+[0m14:17:24.729890 [debug] [Thread-2 (]: Began executing node model.itm327.raw_news
+[0m14:17:24.730838 [debug] [Thread-2 (]: Finished running node model.itm327.raw_news
+[0m14:17:24.731500 [debug] [Thread-2 (]: Began running node model.itm327.raw_stocks
+[0m14:17:24.732231 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_news, now model.itm327.raw_stocks)
+[0m14:17:24.732779 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_stocks
+[0m14:17:24.737943 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_stocks"
+[0m14:17:24.738766 [debug] [Thread-2 (]: Began executing node model.itm327.raw_stocks
+[0m14:17:24.739709 [debug] [Thread-2 (]: Finished running node model.itm327.raw_stocks
+[0m14:17:24.740405 [debug] [Thread-2 (]: Began running node model.itm327.raw_weather
+[0m14:17:24.741113 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_stocks, now model.itm327.raw_weather)
+[0m14:17:24.741653 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_weather
+[0m14:17:24.746793 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_weather"
+[0m14:17:24.747543 [debug] [Thread-2 (]: Began executing node model.itm327.raw_weather
+[0m14:17:24.748519 [debug] [Thread-2 (]: Finished running node model.itm327.raw_weather
+[0m14:17:24.749218 [debug] [Thread-2 (]: Began running node model.itm327.dim_news_cox_a
+[0m14:17:24.749927 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_weather, now model.itm327.dim_news_cox_a)
+[0m14:17:24.750476 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news_cox_a
+[0m14:17:24.758586 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news_cox_a"
+[0m14:17:24.759395 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news_cox_a
+[0m14:17:24.760350 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news_cox_a
+[0m14:17:24.761021 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks_cox_a
+[0m14:17:24.761760 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news_cox_a, now model.itm327.dim_stocks_cox_a)
+[0m14:17:24.762315 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks_cox_a
+[0m14:17:24.768106 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks_cox_a"
+[0m14:17:24.768913 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks_cox_a
+[0m14:17:24.769827 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks_cox_a
+[0m14:17:24.770488 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_cox_a
+[0m14:17:24.771453 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks_cox_a, now model.itm327.dim_weather_cox_a)
+[0m14:17:24.772025 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_cox_a
+[0m14:17:24.777855 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_cox_a"
+[0m14:17:24.778661 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_cox_a
+[0m14:17:24.779574 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_cox_a
+[0m14:17:24.780261 [debug] [Thread-2 (]: Began running node model.itm327.fact_news_daily_cox_a
+[0m14:17:24.781226 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_cox_a, now model.itm327.fact_news_daily_cox_a)
+[0m14:17:24.781816 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_news_daily_cox_a
+[0m14:17:24.787380 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_news_daily_cox_a"
+[0m14:17:24.788163 [debug] [Thread-2 (]: Began executing node model.itm327.fact_news_daily_cox_a
+[0m14:17:24.789155 [debug] [Thread-2 (]: Finished running node model.itm327.fact_news_daily_cox_a
+[0m14:17:24.789816 [debug] [Thread-2 (]: Began running node model.itm327.ml_analysis_fact_cox_a
+[0m14:17:24.790525 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_news_daily_cox_a, now model.itm327.ml_analysis_fact_cox_a)
+[0m14:17:24.791086 [debug] [Thread-2 (]: Began compiling node model.itm327.ml_analysis_fact_cox_a
+[0m14:17:24.799027 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.ml_analysis_fact_cox_a"
+[0m14:17:24.799858 [debug] [Thread-2 (]: Began executing node model.itm327.ml_analysis_fact_cox_a
+[0m14:17:24.800825 [debug] [Thread-2 (]: Finished running node model.itm327.ml_analysis_fact_cox_a
+[0m14:17:24.802024 [debug] [Thread-2 (]: Began running node model.itm327.Mart_stock_weather_daily
+[0m14:17:24.802839 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.ml_analysis_fact_cox_a, now model.itm327.Mart_stock_weather_daily)
+[0m14:17:24.803420 [debug] [Thread-2 (]: Began compiling node model.itm327.Mart_stock_weather_daily
+[0m14:17:24.813270 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.Mart_stock_weather_daily"
+[0m14:17:24.814080 [debug] [Thread-2 (]: Began executing node model.itm327.Mart_stock_weather_daily
+[0m14:17:24.815015 [debug] [Thread-2 (]: Finished running node model.itm327.Mart_stock_weather_daily
+[0m14:17:24.816152 [debug] [Thread-2 (]: Began running node model.itm327.ml_mart
+[0m14:17:24.817012 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.Mart_stock_weather_daily, now model.itm327.ml_mart)
+[0m14:17:24.817575 [debug] [Thread-2 (]: Began compiling node model.itm327.ml_mart
+[0m14:17:24.848694 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.ml_mart"
+[0m14:17:24.849589 [debug] [Thread-2 (]: Began executing node model.itm327.ml_mart
+[0m14:17:24.850550 [debug] [Thread-2 (]: Finished running node model.itm327.ml_mart
+[0m14:17:24.852562 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m14:17:24.853055 [debug] [Dummy-1   ]: Connection 'model.itm327.ml_mart' was properly closed.
+[0m14:17:24.855471 [debug] [Dummy-1   ]: Command end result
+[0m14:17:24.887994 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:17:24.890384 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:17:24.899735 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m14:17:24.901591 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.1850505, "process_in_blocks": "0", "process_kernel_time": 0.99, "process_mem_max_rss": "434928", "process_out_blocks": "0", "process_user_time": 5.08}
+[0m14:17:24.902270 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 14:17:24.901999 after 3.19 seconds
+[0m14:17:24.902814 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:18:14.342578 | 442139cf-14fa-456e-931a-b2986d8e8051 ==============================
+[0m14:18:14.342578 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:18:14.343653 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m14:18:14.700984 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:18:15.246121 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m14:18:15.488008 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:18:15.488714 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:18:15.747986 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:18:15.750686 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:18:15.792301 [info ] [Dummy-1   ]: Found 11 models, 3 sources, 476 macros
+[0m14:18:15.794629 [info ] [Dummy-1   ]: 
+[0m14:18:15.795201 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m14:18:15.795694 [info ] [Dummy-1   ]: 
+[0m14:18:15.796548 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m14:18:15.804154 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m14:18:15.914097 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:18:15.914772 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m14:18:15.915279 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:18:16.645159 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.730 seconds
+[0m14:18:16.651015 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:18:16.651632 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m14:18:16.949155 [debug] [ThreadPool]: SQL status: SUCCESS 78 in 0.297 seconds
+[0m14:18:16.955156 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m14:18:16.955741 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m14:18:17.021693 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.065 seconds
+[0m14:18:17.055987 [debug] [Thread-2 (]: Began running node model.itm327.Mart_stock_weather_daily
+[0m14:18:17.056805 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.Mart_stock_weather_daily)
+[0m14:18:17.057401 [debug] [Thread-2 (]: Began compiling node model.itm327.Mart_stock_weather_daily
+[0m14:18:17.071724 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.Mart_stock_weather_daily"
+[0m14:18:17.072703 [debug] [Thread-2 (]: Began executing node model.itm327.Mart_stock_weather_daily
+[0m14:18:17.073758 [debug] [Thread-2 (]: Finished running node model.itm327.Mart_stock_weather_daily
+[0m14:18:17.076048 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m14:18:17.076602 [debug] [Dummy-1   ]: Connection 'model.itm327.Mart_stock_weather_daily' was properly closed.
+[0m14:18:17.077538 [debug] [Dummy-1   ]: Command end result
+[0m14:18:17.109815 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:18:17.112063 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:18:17.120917 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m14:18:17.122030 [info ] [Dummy-1   ]: Compiled node 'Mart_stock_weather_daily' is:
+
+
+WITH stock_weather AS (
+    SELECT
+        d.calendar_date,
+        d.day_name,
+        d.week_number,
+        d.month_name,
+        d.year,
+        s.symbol,
+
+        -- Stock prices
+        ml.open,
+        ml.high,
+        ml.low,
+        ml.close,
+        ml.volume,
+
+        -- Daily price change
+        ROUND(ml.close - ml.open, 4)                                         AS price_change,
+        ROUND(((ml.close - ml.open) / NULLIF(ml.open, 0)) * 100, 2)         AS price_change_pct,
+
+        -- Price volatility
+        ROUND(ml.high - ml.low, 4)                                           AS daily_volatility,
+
+        -- New York weather
+        ml.ny_max_temp,
+        ml.ny_min_temp,
+        ml.ny_percip,
+        ml.ny_max_wind,
+
+        -- Tokyo weather
+        ml.tokyo_max_temp,
+        ml.tokyo_min_temp,
+        ml.tokyo_percip,
+        ml.tokyo_max_wind,
+
+        -- London weather
+        ml.london_max_temp,
+        ml.london_min_temp,
+        ml.london_percip,
+        ml.london_max_wind
+
+    FROM SNOWBEARAIR_DB.RAW.ml_analysis_fact_cox_a ml
+    JOIN SNOWBEARAIR_DB.RAW.dim_stocks_cox_a s
+        ON s.dim_stocks_sk = ml.dim_stocks_sk
+    JOIN SNOWBEARAIR_DB.RAW.dim_dates_cox_a d
+        ON d.date_sk = ml.date_sk
+),
+
+news_with_sentiment AS (
+    SELECT
+        d.calendar_date,
+        s.symbol,
+        n.headline,
+        n.summary,
+        n.category,
+
+        -- Snowflake Cortex AI: sentiment score on headline (-1 negative → 1 positive)
+        SNOWFLAKE.CORTEX.SENTIMENT(n.headline)                               AS headline_sentiment,
+
+        -- Snowflake Cortex AI: sentiment score on full summary
+        SNOWFLAKE.CORTEX.SENTIMENT(n.summary)                                AS summary_sentiment
+
+    FROM SNOWBEARAIR_DB.RAW.fact_news_daily_cox_a fn
+    JOIN SNOWBEARAIR_DB.RAW.dim_news_cox_a n
+        ON n.id = fn.dim_news_sk
+    JOIN SNOWBEARAIR_DB.RAW.dim_stocks_cox_a s
+        ON s.dim_stocks_sk = fn.dim_stocks_sk
+    JOIN SNOWBEARAIR_DB.RAW.dim_dates_cox_a d
+        ON d.date_sk = fn.date_sk
+),
+
+news_counts AS (
+    SELECT
+        calendar_date,
+        symbol,
+        COUNT(*)                                                             AS news_count,
+        COUNT(CASE WHEN category = 'business' THEN 1 END)                   AS business_news_count,
+        COUNT(CASE WHEN category = 'technology' THEN 1 END)                 AS tech_news_count,
+
+        -- Cortex AI: average sentiment across all headlines for that stock that day
+        ROUND(AVG(headline_sentiment), 4)                                    AS avg_headline_sentiment,
+
+        -- Cortex AI: average sentiment across all summaries
+        ROUND(AVG(summary_sentiment), 4)                                     AS avg_summary_sentiment,
+
+        -- Cortex AI: most positive and most negative headline of the day
+        MAX(headline_sentiment)                                              AS max_headline_sentiment,
+        MIN(headline_sentiment)                                              AS min_headline_sentiment,
+
+        -- Cortex AI: sentiment signal (bullish / bearish / neutral)
+        CASE
+            WHEN AVG(headline_sentiment) >= 0.2  THEN 'bullish'
+            WHEN AVG(headline_sentiment) <= -0.2 THEN 'bearish'
+            ELSE 'neutral'
+        END                                                                  AS sentiment_signal
+
+    FROM news_with_sentiment
+    GROUP BY calendar_date, symbol
+)
+
+SELECT
+    sw.*,
+    COALESCE(nc.news_count, 0)               AS total_news_count,
+    COALESCE(nc.business_news_count, 0)      AS business_news_count,
+    COALESCE(nc.tech_news_count, 0)          AS tech_news_count,
+    COALESCE(nc.avg_headline_sentiment, 0)   AS avg_headline_sentiment,
+    COALESCE(nc.avg_summary_sentiment, 0)    AS avg_summary_sentiment,
+    COALESCE(nc.max_headline_sentiment, 0)   AS max_headline_sentiment,
+    COALESCE(nc.min_headline_sentiment, 0)   AS min_headline_sentiment,
+    COALESCE(nc.sentiment_signal, 'neutral') AS sentiment_signal
+FROM stock_weather sw
+LEFT JOIN news_counts nc
+    ON nc.calendar_date = sw.calendar_date
+    AND nc.symbol       = sw.symbol
+ORDER BY sw.calendar_date, sw.symbol
+[0m14:18:17.124154 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.877403, "process_in_blocks": "0", "process_kernel_time": 0.96, "process_mem_max_rss": "435224", "process_out_blocks": "0", "process_user_time": 4.8}
+[0m14:18:17.124868 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 14:18:17.124596 after 2.88 seconds
+[0m14:18:17.125417 [debug] [Dummy-1   ]: Flushing usage events

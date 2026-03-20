@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+
 
 WITH stock_weather AS (
     SELECT
@@ -41,10 +41,10 @@ WITH stock_weather AS (
         ml.london_percip,
         ml.london_max_wind
 
-    FROM {{ ref('ml_analysis_fact_cox_a') }} ml
-    JOIN {{ ref('dim_stocks_cox_a') }} s
+    FROM SNOWBEARAIR_DB.RAW.ml_analysis_fact_cox_a ml
+    JOIN SNOWBEARAIR_DB.RAW.dim_stocks_cox_a s
         ON s.dim_stocks_sk = ml.dim_stocks_sk
-    JOIN {{ ref('dim_dates_cox_a') }} d
+    JOIN SNOWBEARAIR_DB.RAW.dim_dates_cox_a d
         ON d.date_sk = ml.date_sk
 ),
 
@@ -62,12 +62,12 @@ news_with_sentiment AS (
         -- Snowflake Cortex AI: sentiment score on full summary
         SNOWFLAKE.CORTEX.SENTIMENT(n.summary)                                AS summary_sentiment
 
-    FROM {{ ref('fact_news_daily_cox_a') }} fn
-    JOIN {{ ref('dim_news_cox_a') }} n
+    FROM SNOWBEARAIR_DB.RAW.fact_news_daily_cox_a fn
+    JOIN SNOWBEARAIR_DB.RAW.dim_news_cox_a n
         ON n.id = fn.dim_news_sk
-    JOIN {{ ref('dim_stocks_cox_a') }} s
+    JOIN SNOWBEARAIR_DB.RAW.dim_stocks_cox_a s
         ON s.dim_stocks_sk = fn.dim_stocks_sk
-    JOIN {{ ref('dim_dates_cox_a') }} d
+    JOIN SNOWBEARAIR_DB.RAW.dim_dates_cox_a d
         ON d.date_sk = fn.date_sk
 ),
 
